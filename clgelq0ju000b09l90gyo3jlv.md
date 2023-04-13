@@ -14,7 +14,7 @@ Here is the UI that we want to build ultimately in this blog.
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1681357013086/d6a59615-0afb-4dfe-81da-088f0db29d9a.png align="center")
 
-### Required Flutter packages:
+### Required Flutter packages
 
 Open pubspec.yaml and add these packages under dependencies:
 
@@ -31,7 +31,7 @@ dependencies:
 
 **Google Fonts** is used for custom fonts. **Shared Preferences**, this package is used for storing small data such as current\_theme\_mode, is\_user\_logged\_in, etc. **Intl** is widely used to convert DateTime to our desired date string. The **Sign\_button** package is used to design social media login buttons with proper design guidelines.
 
-### Import Necessary Assets:
+### Import Necessary Assets
 
 To use local assets, we must add this line to the pubspec.yaml: assets:
 
@@ -45,7 +45,7 @@ flutter:
 
 I have saved a .gif image named 'boring.gif' inside the folder named 'images.' The link to the file is [HERE](https://github.com/anwholesquare/uPromise/blob/2547cfccfb85ae555423d1b0661f18b097b871d7/assets/images/boring.gif).
 
-### Import dart files to main.dart:
+### Import dart files to main.dart
 
 For the project, we need these importations inside the **main.dart** file:
 
@@ -59,7 +59,7 @@ import 'dart:convert';
 import 'package:sign_button/sign_button.dart';
 ```
 
-### Widgets we need to use:
+### Widgets we need to use
 
 The list of widgets we will use:
 
@@ -84,7 +84,7 @@ The list of widgets we will use:
     3. Scaffold
         
 
-### Full main.dart code:
+### Full main.dart code
 
 ```dart
 // ignore_for_file: prefer_const_constructors
@@ -345,10 +345,10 @@ class ThankYouPage extends StatelessWidget {
 }
 ```
 
-### Youtube Fast Flutter Implementation:
+### Youtube Fast Flutter Implementation
 
 %[https://www.youtube.com/watch?v=BshcEvl3pzw] 
 
-### Project GitHub link:
+### Project GitHub link
 
-### [https://github.com/anwholesquare/flutter-testdesign/tree/680d8d52a2a71ee1daec099bc5629073e71a62c7](https://github.com/anwholesquare/flutter-testdesign/tree/680d8d52a2a71ee1daec099bc5629073e71a62c7)
+[https://github.com/anwholesquare/flutter-testdesign/tree/680d8d52a2a71ee1daec099bc5629073e71a62c7](https://github.com/anwholesquare/flutter-testdesign/tree/680d8d52a2a71ee1daec099bc5629073e71a62c7)
