@@ -104,11 +104,11 @@ The output of the program:
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1683176825442/5a984c6b-79c0-4210-a807-1d3f9c5b1019.png align="center")
 
-#### **Convergence**
+#### Convergence
 
 The bisection method has linear convergence with a constant of 1/2.
 
-#### **Drawbacks**
+#### Drawbacks
 
 The bisection method cannot solve for the root of x**²**, as it never becomes negative.
 
