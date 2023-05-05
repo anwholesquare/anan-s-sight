@@ -124,11 +124,11 @@ $$\therefore C = x1 - \dfrac{(x2-x1)*f(x1)}{f(x2)-f(x1)}$$
 
 Visual representation of moving to the closer of the root of the equation by one of the iterations:
 
-<iframe src="https://www.desmos.com/calculator/mxgiy75mrw?embed" width="500" height="500" style="border:1px solid #ccc"></iframe>
+<iframe src="https://www.desmos.com/calculator/mxgiy75mrw?embed" width="300" height="300" style="border:1px solid #ccc"></iframe>
 
 The working procedure is the same as the bisection method except for the approximate root formula.
 
-Algorithm for bisection method:
+Algorithm for False Position method:
 
 ```bash
 1. start
@@ -211,7 +211,7 @@ Newton-Raphson's method is based on the working principle of function derivative
 
 The visual representation of Newton-Raphson's Method:
 
-<iframe src="https://www.desmos.com/calculator/ka8c5bgwfs?embed" width="500" height="500" style="border:1px solid #ccc"></iframe>
+<iframe src="https://www.desmos.com/calculator/ka8c5bgwfs?embed" width="300" height="300" style="border:1px solid #ccc"></iframe>
 
 To use this method, we require an initial guess and the 1st derivatives of the function so that we can form a tangent line and update the approximate value closer to the root.
 
