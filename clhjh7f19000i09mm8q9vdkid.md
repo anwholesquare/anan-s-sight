@@ -89,29 +89,33 @@ void insertion () {
 Code:
 
 ```cpp
-void quickSort(int pivot, int last)
-{
-    if (pivot < last)
-    {
-        int i = pivot + 1;
-        int j = last;
-       
-        while (v[i] < v[pivot])
-                i++;
-        while (v[j] > v[pivot])
-                j--;
-                
-        while (i < j)
-        {
-            swap(v[j], v[i]);
-            while (v[i] < v[pivot])
-                i++;
-            while (v[j] > v[pivot])
-                j--;
+int partition (vector<int>& v, int low, int high) {
+    int pivot = v[low];
+    int i = low +1;
+    int j = high;
+    while (true) {
+        while (i <= j && v[i] <= pivot) {
+            i++;
         }
-        swap(v[j], v[pivot]);
-        quickSort(pivot, j - 1);
-        quickSort(j + 1, last);
+        while ( i <= j && v[j] >= pivot) {
+            j--;
+        }
+        if (i <= j) {
+            swap (v[i], v[j]);
+        }else {
+            break;
+        }
+    }
+    swap(v[low], v[j]);
+    return j;
+}
+
+void quicksort (vector<int>& v, int low, int high)
+{
+    if (low < high) {
+        int pi = partition (v, low, high);
+        quicksort(v, low, pi-1);
+        quicksort(v, pi+1, high);    
     }
 }
 ```
