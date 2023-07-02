@@ -4,7 +4,7 @@ seoTitle: "Learn Flutter State Management with GetX and many more..."
 seoDescription: "With getX, you can easily separate the application logic from the UI, resulting in cleaner and more modular code. It follows a reactive programming approach"
 datePublished: Sun Jul 02 2023 02:54:54 GMT+0000 (Coordinated Universal Time)
 cuid: cljkua4bw000009lfdm599ehr
-slug: flutter-state-management-with-getx-and-many-more
+slug: flutter-getx
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1688248445403/ed080ea1-a020-4f83-b25f-14265566f7fd.png
 tags: flutter, navigation, snackbar, state-management, getx
 
