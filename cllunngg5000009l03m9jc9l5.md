@@ -4,7 +4,6 @@ datePublished: Mon Aug 28 2023 09:06:25 GMT+0000 (Coordinated Universal Time)
 cuid: cllunngg5000009l03m9jc9l5
 slug: assembler-8086-shortcuts
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1693213446091/7e63cbe2-6f73-4f3f-bdf9-fa685ffa1e3e.png
-ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1693213537634/f97b11b0-7fbd-4d49-b89e-a456637cc42e.png
 tags: assembly-language, assembler, microprocessors, 8086
 
 ---
