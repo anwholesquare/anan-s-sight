@@ -34,8 +34,7 @@ if distance[i] + weight[i][j] < distance[j]:
 end if
 ```
 
-1. ### Shortest path in a DAG using topological sorting
-    
+### Shortest path in a DAG using topological sorting
 
 When dealing with a Directed Acyclic Graph (DAG), a graph without any cycles, we can find the shortest path from a single source node to all other nodes using a combination of topological sorting and edge relaxation. The key insight is that we process nodes in topological order, calculating the shortest distance to each node based on the distances to its incoming neighbors.
 
@@ -95,8 +94,7 @@ Now, we need to find paths from the source node to other nodes:
 ***r to y:*** 7 (r -&gt; t -&gt; y)  
 ***r to z:*** 5 (r -&gt; t -&gt; z)
 
-1. ### Dijkstra Algorithm
-    
+### Dijkstra Algorithm
 
 Dijkstra is useful for cyclic non-negative edge graphs where we must find all the shortest paths from a single source node. The algorithm maintains a set of explored nodes and continually updates the shortest distance from the source node to each node in the graph.
 
@@ -181,8 +179,7 @@ Now, we need to find paths from the source node to other nodes:
 ***s to c:*** 5 ( s-&gt; c)  
 ***s to d:*** 7 (s -&gt; c -&gt; d)
 
-1. ### **Bellman-Ford Algorithm**
-    
+### **Bellman-Ford Algorithm**
 
 The Bellman-Ford algorithm finds the shortest paths from a single source vertex to all other vertices in a weighted, directed graph. It can handle graphs with negative weight edges and detect the presence of negative weight cycles. This algorithm is named after Richard Bellman and Lester Ford. This algorithm is one of the easiest to find a single source shortest path.
 
