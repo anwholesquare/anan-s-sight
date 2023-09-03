@@ -184,8 +184,8 @@ Now, we need to find paths from the source node to other nodes:
 1. ### **Bellman-Ford Algorithm**
     
 
-The Bellman-Ford algorithm finds the shortest paths from a single source vertex to all other vertices in a weighted, directed graph. It can handle graphs with negative weight edges and detect the presence of negative weight cycles. This algorithm is named after Richard Bellman and Lester Ford. This algorithm is one of the easiest to find a single source shortest path.  
-  
+The Bellman-Ford algorithm finds the shortest paths from a single source vertex to all other vertices in a weighted, directed graph. It can handle graphs with negative weight edges and detect the presence of negative weight cycles. This algorithm is named after Richard Bellman and Lester Ford. This algorithm is one of the easiest to find a single source shortest path.
+
 Here's an overview of how the Bellman-Ford algorithm works:
 
 1. Initialize an array to store the minimum distance from the source vertex to each vertex in the graph. Initially, set the distance to infinity for all vertices except the source, which is set to zero.
@@ -276,8 +276,8 @@ s = 0
 a = Infinity  
 b = Infinity  
 c = Infinity  
-d = Infinity  
-  
+d = Infinity
+
 **Edge list:**
 
 1\. (a, b) = 5  
@@ -321,8 +321,8 @@ s = 0
 a = 2  
 b = 4  
 c = 7  
-d = -2  
-  
+d = -2
+
 **Iteration 5:**  
 No relaxes in edge list so it has no negative cycle.  
 s = 0  
@@ -332,4 +332,12 @@ c = 7
 d = -2  
 Note: We can store the predecessor value on edge relaxing updates to get the path.  
   
-To be continued...
+Here is a table summarizing the differences between DAG shortest path algorithms using topological sort, Dijkstra, and Bellman-Ford:
+
+| **Algorithm** | **Applicability** | **Time complexity** | **Can handle negative weights?** | **Can detect negative weight cycles?** |
+| --- | --- | --- | --- | --- |
+| DAG shortest path using topological sort | Directed acyclic graphs (DAGs) | O(V + E) | No | No |
+| Dijkstra | General graphs | O(E \* log V) | No | No |
+| Bellman-Ford | General graphs | O(VE) | Yes | Yes |
+
+Thank you for reading the article.
