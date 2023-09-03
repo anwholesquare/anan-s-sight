@@ -330,8 +330,8 @@ a = 2
 b = 4  
 c = 7  
 d = -2  
-Note: We can store the predecessor value on edge relaxing updates to get the path.  
-  
+Note: We can store the predecessor value on edge relaxing updates to get the path.
+
 Here is a table summarizing the differences between DAG shortest path algorithms using topological sort, Dijkstra, and Bellman-Ford:
 
 | **Algorithm** | **Applicability** | **Time complexity** | **Can handle negative weights?** | **Can detect negative weight cycles?** |
