@@ -184,4 +184,152 @@ Now, we need to find paths from the source node to other nodes:
 1. ### **Bellman-Ford Algorithm**
     
 
-To be continued..
+The Bellman-Ford algorithm finds the shortest paths from a single source vertex to all other vertices in a weighted, directed graph. It can handle graphs with negative weight edges and detect the presence of negative weight cycles. This algorithm is named after Richard Bellman and Lester Ford. This algorithm is one of the easiest to find a single source shortest path.  
+  
+Here's an overview of how the Bellman-Ford algorithm works:
+
+1. Initialize an array to store the minimum distance from the source vertex to each vertex in the graph. Initially, set the distance to infinity for all vertices except the source, which is set to zero.
+    
+2. Iterate over all edges in the graph repeatedly for a number of times equal to the number of vertices minus one. In each iteration, update the minimum distance to each vertex by considering all possible paths through other vertices.
+    
+
+$$Total\space number\space of \space iteration = Number \space of \space vertex-1$$
+
+1. After the iteration is complete, check for negative weight cycles. If any vertex's distance can still be improved in one more iteration, it means there is a negative weight cycle in the graph.
+    
+2. If no negative weight cycles are detected, the minimum distances from the source vertex to all other vertices have been computed.
+    
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Edge {
+    int source, destination, weight;
+};
+
+void BellmanFord(vector<Edge>& edges, int V, int source) {
+    vector<int> distance(V, INT_MAX);
+    distance[source] = 0;
+
+    for (int i = 0; i < V - 1; i++) {
+        for (const Edge& edge : edges) {
+            int u = edge.source;
+            int v = edge.destination;
+            int w = edge.weight;
+
+            if (distance[u] != INT_MAX && distance[u] + w < distance[v]) {
+                distance[v] = distance[u] + w;
+            }
+        }
+    }
+
+    // Check for negative weight cycles
+    for (const Edge& edge : edges) {
+        int u = edge.source;
+        int v = edge.destination;
+        int w = edge.weight;
+
+        if (distance[u] != INT_MAX && distance[u] + w < distance[v]) {
+            cout << "Graph contains a negative weight cycle!" << endl;
+            return;
+        }
+    }
+
+    // Print the shortest distances from the source vertex
+    cout << "Shortest distances from source vertex " << source << ":" << endl;
+    for (int i = 0; i < V; i++) {
+        cout << "Vertex " << i << ": " << distance[i] << endl;
+    }
+}
+
+int main() {
+    int V, E;
+    cout << "Enter the number of vertices and edges: ";
+    cin >> V >> E;
+
+    vector<Edge> edges(E);
+
+    cout << "Enter source, destination, and weight for each edge:" << endl;
+    for (int i = 0; i < E; i++) {
+        cin >> edges[i].source >> edges[i].destination >> edges[i].weight;
+    }
+
+    int source;
+    cout << "Enter the source vertex: ";
+    cin >> source;
+
+    BellmanFord(edges, V, source);
+
+    return 0;
+}
+```
+
+Example:  
+The source node is ***s*** and explores all shortest paths from the source node. Show the manual passing. **(DO IT BY YOURSELF)**
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1693756367568/184253d8-ee63-44f4-8b40-30544b3fc2aa.png align="center")
+
+**Answer:** Passing is given below:  
+**Initial distances:**  
+s = 0  
+a = Infinity  
+b = Infinity  
+c = Infinity  
+d = Infinity  
+  
+**Edge list:**
+
+1\. (a, b) = 5  
+2\. (a, c) = 8  
+3\. (a, d) = -4  
+4\. (b, a) = -2  
+5\. (c, b) = -3  
+6\. (c, d) = 9  
+7\. (d, s) = 2  
+8\. (d, b) = 7  
+9\. (s, a) = 6  
+10\. (s,c) = 7
+
+**Iteration 1:**  
+Relax edges (s, a) and (s, c).  
+s = 0  
+a = 6  
+b = Infinity  
+c = 7  
+d = Infinity
+
+**Iteration 2:**  
+Relax edges (a, b), (a, d), and (c, b).  
+s = 0  
+a = 6  
+b = 4  
+c = 7  
+d = 2
+
+**Iteration 3:**  
+Relax edges (b, a).  
+s = 0  
+a = 2  
+b = 4  
+c = 7  
+d = 2
+
+**Iteration 4:**  
+Relax edges (a, d).  
+s = 0  
+a = 2  
+b = 4  
+c = 7  
+d = -2  
+  
+**Iteration 5:**  
+No relaxes in edge list so it has no negative cycle.  
+s = 0  
+a = 2  
+b = 4  
+c = 7  
+d = -2  
+Note: We can store the predecessor value on edge relaxing updates to get the path.  
+  
+To be continued...
