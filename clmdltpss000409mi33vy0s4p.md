@@ -209,14 +209,13 @@ A very important consideration in data communications is how fast we can send da
 
 Two theoretical formulas were developed to calculate the data rate: one by Nyquist for a noiseless channel, and another by Shannon for a noisy channel.
 
-1. Noiseless Channel: Nyquist Bit Rate
-    
-    $bitrate = 2 \\times bandwidth \\times bit \\space length$ = 2 *bandwidth* log(Level)
-    
-2. Noisy Channel: Shannon Capacity
-    
-    $Capacity = bandwidth \\times log\_2(1 + SNR)$
-    
+Noiseless Channel: Nyquist Bit Rate
+
+$$bitrate = 2 \times bandwidth \times bit \space length = 2 \times bandwidth \times log_2(Level)$$
+
+Noisy Channel: Shannon Capacity
+
+$$Capacity = bandwidth \times log_2(1 + SNR)$$
 
 capacity is the capacity of the channel in bits per second
 
@@ -248,9 +247,9 @@ Characteristics of Digital Signal Conversion:
 
 **Digital to Digital Data Encoding:**
 
-$$r = \frac {data\space element}{signal \space element} = \frac{data \space rate}{ signal \space rate} = \frac{N}{S} $$
+$$r = \frac {data\space element}{signal \space element} = \frac{data \space rate}{ signal \space rate} = \frac{N}{S}$$
 
- ![](https://anwholesquare.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fb6067351-1921-4756-90ef-19d0061185e8%2Fa70ea2fb-f261-49ed-9719-196debb6f02e%2FUntitled.png?table=block&id=ea208083-5e25-432e-9b47-92c209d85a77&spaceId=b6067351-1921-4756-90ef-19d0061185e8&width=2000&userId=&cache=v2 align="left")
+![](https://anwholesquare.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fb6067351-1921-4756-90ef-19d0061185e8%2Fa70ea2fb-f261-49ed-9719-196debb6f02e%2FUntitled.png?table=block&id=ea208083-5e25-432e-9b47-92c209d85a77&spaceId=b6067351-1921-4756-90ef-19d0061185e8&width=2000&userId=&cache=v2 align="left")
 
 Three types of encoding schemes:
 
