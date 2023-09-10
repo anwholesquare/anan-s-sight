@@ -307,12 +307,7 @@ Three types of encoding schemes:
         
         1. 2B1Q:
             
-            | level | +ve | \-ve |
-            | --- | --- | --- |
-            | 00 | +1 | \-1 |
-            | 01 | +3 | \-3 |
-            | 10 | \-1 | +1 |
-            | 11 | \-3 | +3 |
+            ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1694360104120/8de6e9ac-3bc5-4459-a3a1-dde147ed410f.png align="center")
             
     5. Multitransition:
         
@@ -482,18 +477,13 @@ There are 3 multiplexing techniques to utilize the bandwidth:
 
 1. FHSS (Frequency Hopping Spread Spectrum)
     
-    It uses a hopping sequence to hop frequencies for transfering data in runtime.
+    It uses a hopping sequence to hop frequencies for transferring data in runtime.
     
     Hopping sequence: 100, 400, 300, 200
     
     Data: 100, 010, 011, 101
     
-    | 400 MHz |  | 010 |  |  |
-    | --- | --- | --- | --- | --- |
-    | 300 MHz |  |  | 011 |  |
-    | 200 MHz |  |  |  | 101 |
-    | 100 MHz | 100 |  |  |  |
-    | 0 MHz | 1 Time Unit | 2 Time Unit | 3 Time Unit | 4 Time Unit |
+    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1694360061669/244f175b-92c5-4ca5-8bea-305230f58824.png align="center")
     
 2. DSSS (Direct Sequence Spread Spectrum)
     
